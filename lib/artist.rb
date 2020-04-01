@@ -34,8 +34,8 @@ class Artist
     end
   end 
   
-  def print_songs
-    self.each{ |song| puts song.name }
+  def self.print_songs
+    self.all.each{ |song| puts song.name }
   end 
 end 
 mj = Artist.new("Michael Jackson")
