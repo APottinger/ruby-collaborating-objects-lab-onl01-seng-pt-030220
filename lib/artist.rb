@@ -27,8 +27,9 @@ class Artist
   end 
   
   def self.find_or_create_by_name(name)
-    self.find_by_name(name)
-    unless artist.name = nil
+    if artist.name = nil?
+      self.find_by_name(name)
+    else
       self.create_by_name(name)
     end
   end 
@@ -39,7 +40,8 @@ class Artist
 end 
 mj = Artist.new("Michael Jackson")
 Artist.all
-  
+
+mj.print_songs
     
   
   
