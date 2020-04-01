@@ -23,10 +23,11 @@ class Artist
   
   def self.create_by_name(name)
     artist = Artist.new(name) 
+    @@all << self
   end 
   
   def self.find_or_create_by_name(name)
-    if name == self.name?
+    if artist.name = nil?
       self.find_by_name(name)
     else
       self.create_by_name(name)
@@ -34,7 +35,7 @@ class Artist
   end 
   
   def print_songs
-    self.songs.each{ |song| puts song.name }
+    self.each{ |song| puts song.name }
   end 
 end 
 mj = Artist.new("Michael Jackson")
