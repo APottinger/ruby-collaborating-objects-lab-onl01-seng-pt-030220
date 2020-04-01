@@ -14,7 +14,7 @@ class Artist
   end 
   
   def add_song(name)
-    @songs << song
+    @songs << self 
   end 
   
   def self.find_by_name(name)
@@ -27,14 +27,14 @@ class Artist
   end 
   
   def self.find_or_create_by_name(name = nil)
-    if artist.name
+    if artist.name?
       self.find_by_name(name)
     else
       self.create_by_name(name)
     end
   end 
   
-  def self.print_all
+  def self.print_songs
     self.all.each{ |song| puts song.name }
   end 
 end 
